@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://powerbi.kineticgain.com/sitemap.xml
