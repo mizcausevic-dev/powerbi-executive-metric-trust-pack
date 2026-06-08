@@ -13,9 +13,10 @@
       main{width:min(1120px,calc(100% - 32px));margin:0 auto;padding:34px 0 52px}.hero{border:1px solid var(--line);border-radius:34px;background:linear-gradient(135deg,rgba(14,22,37,.96),rgba(7,11,18,.9));box-shadow:0 28px 90px rgba(0,0,0,.35);padding:34px}.eyebrow{display:inline-flex;border:1px solid rgba(87,242,177,.25);border-radius:999px;background:rgba(87,242,177,.07);color:var(--green);padding:8px 11px;font:800 11px/1 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.16em;text-transform:uppercase}
       h1{max-width:880px;margin:22px 0 0;font-size:clamp(44px,7vw,88px);line-height:.92;letter-spacing:-.075em}.lede{max-width:760px;color:var(--muted);font-size:20px;line-height:1.6}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:28px}.metric{border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:18px;background:rgba(255,255,255,.035)}.metric b{display:block;font-size:28px}.metric span{color:var(--soft);font:800 11px/1 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em;text-transform:uppercase}
       .section{margin-top:22px;border:1px solid var(--line);border-radius:30px;background:rgba(14,22,37,.78);padding:28px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:18px}h2{margin:0;font-size:clamp(30px,4.5vw,56px);line-height:1;letter-spacing:-.055em}.section-head p{max-width:620px;margin:0;color:var(--muted)}
-      .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}article{border:1px solid rgba(255,255,255,.1);border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));padding:18px;min-height:190px}article span{color:var(--cyan);font:800 11px/1 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em;text-transform:uppercase}article h3{font-size:24px;line-height:1.08;margin:18px 0 10px}article p{color:var(--muted)}.meter{height:8px;border-radius:999px;background:#1e2a3a;overflow:hidden}.meter i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--green),var(--cyan),var(--violet))}
+      .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}article{border:1px solid rgba(255,255,255,.1);border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));padding:18px;min-height:190px}article.compact{min-height:150px}article span{color:var(--cyan);font:800 11px/1 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em;text-transform:uppercase}article h3{font-size:24px;line-height:1.08;margin:18px 0 10px}article p{color:var(--muted)}.meter{height:8px;border-radius:999px;background:#1e2a3a;overflow:hidden}.meter i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--green),var(--cyan),var(--violet))}
+      .table-wrap{overflow:auto;border:1px solid rgba(255,255,255,.09);border-radius:20px}table{width:100%;min-width:760px;border-collapse:collapse}th,td{text-align:left;padding:15px;border-bottom:1px solid rgba(255,255,255,.07);vertical-align:top}th{color:var(--soft);font:800 11px/1 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em;text-transform:uppercase}td small{display:block;color:var(--soft);margin-top:5px}.callout{border:1px solid rgba(87,242,177,.24);border-radius:22px;background:linear-gradient(135deg,rgba(87,242,177,.08),rgba(37,232,255,.045));padding:20px;color:var(--muted)}.callout strong{display:block;color:var(--ink);font-size:18px;margin-bottom:8px}details{border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(255,255,255,.025);padding:14px 16px}details+details{margin-top:10px}summary{cursor:pointer;font-weight:850}
       footer{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:20px;color:var(--soft)}footer nav{display:flex;gap:14px;flex-wrap:wrap}footer a{color:var(--cyan);text-decoration:none}
-      @media(max-width:760px){.nav{display:none}.metrics,.grid{grid-template-columns:1fr}.hero,.section{border-radius:24px;padding:22px}h1{font-size:44px}.lede{font-size:16px}.button{width:100%;justify-content:center}}
+      @media(max-width:760px){.nav{display:none}.metrics,.grid,.grid.four{grid-template-columns:1fr}.hero,.section{border-radius:24px;padding:22px}h1{font-size:44px}.lede{font-size:16px}.button{width:100%;justify-content:center}}
     </style>
   </head>
   <body>
@@ -56,8 +57,62 @@
           </article>
         </div>
       </section>
+      <section class="section">
+        <div class="section-head"><div><h2>Operating workflow</h2><p>This is the public-safe version of a metric-trust operating loop: inventory, attest, score, and brief.</p></div></div>
+        <div class="grid four">
+          <article class="compact">
+            <span>01 / Inventory</span>
+            <p>Map reports, semantic models, refresh schedules, owner records, and finance-facing metric definitions.</p>
+          </article>
+          <article class="compact">
+            <span>02 / Attest</span>
+            <p>Confirm whether the metric owner, data owner, and executive consumer agree on the same definition.</p>
+          </article>
+          <article class="compact">
+            <span>03 / Score</span>
+            <p>Separate report risk from evidence depth so leadership can see whether a problem is dangerous or merely under-documented.</p>
+          </article>
+          <article class="compact">
+            <span>04 / Brief</span>
+            <p>Turn the lane into a board-ready evidence packet with the decision, owner, and next review date.</p>
+          </article>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-head"><div><h2>Evidence requirements</h2><p>Each report lane needs a named owner, risk score, evidence depth, and one board-readable next action.</p></div></div>
+        <div class="table-wrap"><table><thead><tr><th></th><th>Lane</th><th>Risk</th><th>Evidence</th><th>Next action</th></tr></thead><tbody>
+            <tr>
+              <td>01</td>
+              <td><strong>Ownership clarity</strong><small>Platform owner</small></td>
+              <td>68</td>
+              <td>7/10</td>
+              <td>Confirm one accountable owner and one board-readable evidence packet.</td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td><strong>Spend and exposure posture</strong><small>Finance and risk lead</small></td>
+              <td>74</td>
+              <td>6/10</td>
+              <td>Tie cost, access, or workflow exceptions to a remediation queue.</td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td><strong>Decision readiness</strong><small>Executive sponsor</small></td>
+              <td>61</td>
+              <td>8/10</td>
+              <td>Summarize whether to invest, consolidate, remediate, or monitor.</td>
+            </tr>
+        </tbody></table></div>
+      </section>
       <section id="decision" class="section">
         <div class="section-head"><div><h2>Primary decision</h2><p>Tie cost, access, or workflow exceptions to a remediation queue.</p></div></div>
+        <div class="callout"><strong>Board question</strong>Which Power BI metric can leadership trust, which one needs remediation, and which one should be retired or rebuilt before the next operating review?</div>
+      </section>
+      <section class="section">
+        <div class="section-head"><div><h2>Usage notes</h2><p>These notes keep the page concrete without exposing real customer reports, private dashboards, or production credentials.</p></div></div>
+        <details open><summary>What problem does this solve?</summary><p>It prevents Power BI dashboards from becoming executive theater by requiring owners, definitions, evidence depth, and next actions.</p></details>
+        <details><summary>How does this connect to the portfolio?</summary><p>It supports the Power BI platform signal and connects naturally to Tableau, Snowflake, dbt, VWO, and broader revenue-system governance work.</p></details>
+        <details><summary>What is intentionally not included?</summary><p>No private workspaces, tenant IDs, user records, customer data, or live credentialed Power BI API calls are exposed in this public demo.</p></details>
       </section>
       <footer><span>powerbi-executive-metric-trust-pack - synthetic sample data only</span><nav><a href="https://github.com/mizcausevic-dev/powerbi-executive-metric-trust-pack">GitHub</a><a href="https://portfolio.kineticgain.com/">Portfolio</a><a href="https://kineticgain.com/">Kinetic Gain</a></nav></footer>
     </main>
